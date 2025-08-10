@@ -1,0 +1,28 @@
+{
+  "mapping": {
+    "home": "payoneer-iconography-working-file-02",
+    "activity": "payoneer-iconography-working-file-88",
+    "actions": "payoneer-iconography-working-file-04",
+    "cards": "payoneer-iconography-working-file-12",
+    "notification": "payoneer-iconography-working-file-11",
+    "send": "payoneer-iconography-working-file-01",
+    "receive": "payoneer-iconography-working-file-10",
+    "exchange": "payoneer-iconography-working-file-79",
+    "bank": "payoneer-iconography-working-file-13",
+    "search": "#payoneer-search-derived",
+    "filter": "payoneer-iconography-working-file-85"
+  },
+  "confidence": {
+    "home": 0.85,
+    "activity": 0.7,
+    "actions": 0.65,
+    "cards": 0.55,
+    "notification": 0.6,
+    "send": 0.6,
+    "receive": 0.6,
+    "exchange": 0.65,
+    "bank": 0.9,
+    "search": 0.75,
+    "filter": 0.5
+  }
+}

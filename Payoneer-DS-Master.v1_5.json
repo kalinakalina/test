@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "version": "v1.5",
+    "updated": "2025-08-10T06:55:57.486991Z"
+  },
+  "tokens": {
+    "layout": {
+      "dir": "ltr",
+      "rtl_flip_regions": true
+    },
+    "icon": {
+      "strokeWidth": 1.5,
+      "sprite": "/mnt/data/icons_payoneer/sprite_v15/payoneer_sprite.v1_5.svg",
+      "map": {
+        "home": "payoneer-iconography-working-file-02",
+        "activity": "payoneer-iconography-working-file-88",
+        "actions": "payoneer-iconography-working-file-04",
+        "cards": "payoneer-iconography-working-file-12",
+        "notification": "payoneer-iconography-working-file-11",
+        "send": "payoneer-iconography-working-file-01",
+        "receive": "payoneer-iconography-working-file-10",
+        "exchange": "payoneer-iconography-working-file-79",
+        "bank": "payoneer-iconography-working-file-13",
+        "search": "payoneer-search-derived",
+        "filter": "payoneer-iconography-working-file-85"
+      }
+    }
+  },
+  "components": {
+    "CurrencyBadge": {
+      "props": {
+        "flag": "RegionCode",
+        "currencyCode": "CurrencyCode"
+      },
+      "rules": {
+        "flag": {
+          "shape": "circle",
+          "size": 32,
+          "border": "1px neutrals.line"
+        },
+        "code": {
+          "align": "end",
+          "fontSize": "font.sizes.sm",
+          "fontWeight": 600,
+          "minWidth": 42
+        }
+      },
+      "layout": {
+        "gap": "spacing.md",
+        "grid": "40px 1fr auto",
+        "rtlFlip": "layout.rtl_flip_regions"
+      },
+      "a11y": {
+        "flagAlt": "Country flag for {currencyCode}"
+      }
+    },
+    "CurrencyTile": {
+      "props": {
+        "flag": "RegionCode",
+        "currencyCode": "CurrencyCode",
+        "label": "string",
+        "amount": "string"
+      },
+      "composition": [
+        {
+          "component": "CurrencyBadge",
+          "bind": {
+            "flag": "flag",
+            "currencyCode": "currencyCode"
+          }
+        },
+        {
+          "component": "Text",
+          "bind": {
+            "value": "label"
+          },
+          "style": {
+            "size": "font.sizes.xs",
+            "color": "colors.neutrals.subtext"
+          }
+        },
+        {
+          "component": "Text",
+          "bind": {
+            "value": "amount"
+          },
+          "style": {
+            "size": "font.sizes.lg",
+            "weight": 600
+          }
+        },
+        {
+          "component": "Text",
+          "bind": {
+            "value": "currencyCode"
+          },
+          "style": {
+            "size": "font.sizes.sm",
+            "weight": 600,
+            "align": "end",
+            "minWidth": 42
+          }
+        }
+      ],
+      "grid": "40px 1fr auto",
+      "gap": "spacing.md",
+      "acceptance": [
+        "Flag is 32px circle on the left (RTL flips position)",
+        "Currency code is right-aligned with min width 42px",
+        "Label sits above amount; amounts baseline-align with code"
+      ]
+    }
+  },
+  "templates": [],
+  "flows": {},
+  "references": {
+    "sprite": "icons_payoneer/sprite/payoneer_sprite.svg",
+    "manual": "/mnt/data/Daydream-Orchestration-Manual.v1_5.md"
+  }
+}
